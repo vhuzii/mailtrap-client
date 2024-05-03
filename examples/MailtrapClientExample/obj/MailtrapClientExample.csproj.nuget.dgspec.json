@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/volodymyr/NewProjects/mailtrap-client/examples/MailtrapClientExample/MailtrapClientExample.csproj": {}
+  },
+  "projects": {
+    "/home/volodymyr/NewProjects/mailtrap-client/examples/MailtrapClientExample/MailtrapClientExample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/volodymyr/NewProjects/mailtrap-client/examples/MailtrapClientExample/MailtrapClientExample.csproj",
+        "projectName": "MailtrapClientExample",
+        "projectPath": "/home/volodymyr/NewProjects/mailtrap-client/examples/MailtrapClientExample/MailtrapClientExample.csproj",
+        "packagesPath": "/home/volodymyr/.nuget/packages/",
+        "outputPath": "/home/volodymyr/NewProjects/mailtrap-client/examples/MailtrapClientExample/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/volodymyr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj": {
+                "projectPath": "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj",
+        "projectName": "Mailtrap",
+        "projectPath": "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj",
+        "packagesPath": "/home/volodymyr/.nuget/packages/",
+        "outputPath": "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/volodymyr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

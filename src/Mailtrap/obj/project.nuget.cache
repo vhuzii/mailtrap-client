@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "a/c3qy4zEZjolBhBM3l/LQJ/fUEtaE98PH0XUolXHqawFlZcD/5+yRlRbY9V3zIiC4CUVMNz70v2jo7UF7Y79g==",
+  "success": true,
+  "projectFilePath": "/home/volodymyr/NewProjects/mailtrap-client/src/Mailtrap/Mailtrap.csproj",
+  "expectedPackageFiles": [
+    "/home/volodymyr/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/volodymyr/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "/home/volodymyr/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
