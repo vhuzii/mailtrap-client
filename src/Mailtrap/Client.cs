@@ -7,21 +7,24 @@ using Microsoft.Extensions.Options;
 
 namespace Mailtrap;
 
-public class Client(IOptions<ClientOptons> options)
+public class Client(IOptions<ClientOptions> options, HttpClient httpClient)
 {
-    private readonly HttpClient _httpClient = new HttpClient();
-    private readonly ClientOptons _options = options.Value;
+    private readonly HttpClient _httpClient = httpClient;
+    private readonly ClientOptions _options = options.Value;
+
+    public Client(IOptions<ClientOptions> options) 
+        : this(options, new HttpClient()) { }
 
     public async Task SendEmailAsync(Email message)
     {
-        var url = ClientOptons.Host + $"/api/send";
+        var url = ClientOptions.Host + $"/api/send";
 
         var request = new HttpRequestMessage(HttpMethod.Post, url) 
         {
             Content = new StringContent(JsonSerializer.Serialize(message), Encoding.UTF8, "application/json")
         };
         
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _options.Token);
+        request.Headers.Authorization = _options.Authentication;
 
         var response = await _httpClient.SendAsync(request);
 

@@ -11,5 +11,5 @@ public abstract class Email
     public List<Address>? Cc { get; set; }
     public List<Address>? Bcc { get; set; }
     public required string Subject { get; set; }
-
+    public List<Attachment>? Attachments { get; set; }
 }
