@@ -7,7 +7,7 @@ services.AddMailtrap(options => options.Token = "<TOKEN>");
 ## Set up with a constructor
 
 ```
-Client client = new(Options.Create(new ClientOptions { Token = "<TOKEN>" }));
+Client client = new(token: "<TOKEN>");
 ```
 
 ### Run preinstalled examples (replace `"<TOKEN>"` const with a real token in Program.cs files)
