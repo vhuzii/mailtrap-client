@@ -9,7 +9,7 @@ namespace Mailtrap;
 public class Client(string token, HttpClient httpClient)
 {
     private readonly HttpClient _httpClient = httpClient;
-    private readonly AuthenticationHeaderValue authorization = new("Bearer", token);
+    private readonly AuthenticationHeaderValue _authorization = new("Bearer", token);
     public Client(string token) : this(token, new HttpClient()) { }
     
 
@@ -22,14 +22,9 @@ public class Client(string token, HttpClient httpClient)
             Content = new StringContent(JsonSerializer.Serialize(message), Encoding.UTF8, "application/json")
         };
         
-        request.Headers.Authorization = authorization;
+        request.Headers.Authorization = _authorization;
 
         var response = await _httpClient.SendAsync(request);
-
-        if (!response.IsSuccessStatusCode)
-        {   
-            Console.WriteLine(response);
-            throw new Exception("Failed to send email");
-        }
+        response.EnsureSuccessStatusCode();
     }
 }
