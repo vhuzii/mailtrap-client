@@ -4,7 +4,7 @@ using Mailtrap.Options;
 using Microsoft.Extensions.Options;
 const string token = "<TOKEN>";
 
-Client client = new(Options.Create(new ClientOptions { Token = token }));
+Client client = new(token);
 
 await client.SendEmailAsync(new HtmlEmail
 {
