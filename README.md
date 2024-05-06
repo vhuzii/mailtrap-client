@@ -7,7 +7,7 @@ services.AddMailtrap(options => options.Token = "<TOKEN>");
 ## Set up with a constructor
 
 ```
-Client client = new(Options.Create(new ClientOptions { Token = "<TOKEN>" }));
+Client client = new(token: "<TOKEN>");
 ```
 
 ### Run preinstalled examples (replace `"<TOKEN>"` const with a real token in Program.cs files)
@@ -15,6 +15,7 @@ Client client = new(Options.Create(new ClientOptions { Token = "<TOKEN>" }));
 - Email with text - `dotnet run --project examples/MailtrapClientTextExample` 
 - Email with html - `dotnet run --project examples/MailtrapClientHtmlExample`
 - Email with attachment - `dotnet run --project examples/MailtrapClientAttachmentExample`
+- Email with text when using DI - `dotnet run --project examples/MailtrapClientTextExampleWithDI`
 
 ### Usage example
 
