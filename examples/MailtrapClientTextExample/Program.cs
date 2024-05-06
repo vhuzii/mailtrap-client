@@ -1,7 +1,5 @@
 ﻿using Mailtrap;
 using Mailtrap.DTOs;
-using Mailtrap.Options;
-using Microsoft.Extensions.Options;
 
 const string token = "<TOKEN>";
 

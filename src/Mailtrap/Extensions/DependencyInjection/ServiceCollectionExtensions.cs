@@ -1,11 +1,10 @@
 
-using Mailtrap.DependncyInjection;
 using Mailtrap.Options;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 
-namespace Mailtrap.DependencyInjection.Extensions;
+namespace Mailtrap.Extensions.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {
