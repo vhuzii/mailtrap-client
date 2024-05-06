@@ -1,7 +1,7 @@
 using Mailtrap.Options;
 using Microsoft.Extensions.Options;
 
-namespace Mailtrap;
+namespace Mailtrap.DependncyInjection;
 
 internal class InjectableClient(IOptions<ClientOptions> options, HttpClient httpClient) : Client(options.Value.Token, httpClient)
 {

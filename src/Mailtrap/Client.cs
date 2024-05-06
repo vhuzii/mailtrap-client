@@ -1,10 +1,8 @@
-﻿using System.Net;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using Mailtrap.DTOs;
 using Mailtrap.Options;
-using Microsoft.Extensions.Options;
 
 namespace Mailtrap;
 
