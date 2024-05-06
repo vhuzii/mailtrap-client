@@ -15,6 +15,7 @@ Client client = new(token: "<TOKEN>");
 - Email with text - `dotnet run --project examples/MailtrapClientTextExample` 
 - Email with html - `dotnet run --project examples/MailtrapClientHtmlExample`
 - Email with attachment - `dotnet run --project examples/MailtrapClientAttachmentExample`
+- Email with text when using DI - `dotnet run --project examples/MailtrapClientTextExampleWithDI`
 
 ### Usage example
 
