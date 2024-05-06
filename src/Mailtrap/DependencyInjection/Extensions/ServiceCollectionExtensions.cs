@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 
-namespace Mailtrap.Extensions.DependencyInjection;
+namespace Mailtrap.DependencyInjection.Extensions;
 
 public static class ServiceCollectionExtensions
 {
