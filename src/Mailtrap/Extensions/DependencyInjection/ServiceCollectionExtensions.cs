@@ -13,8 +13,7 @@ public static class ServiceCollectionExtensions
         services.AddOptions<ClientOptions>()
             .Configure((options) => configureOptions(options));
 
-        services.TryAddTransient<Client>(resolver => resolver.GetRequiredService<InjectableClient>());
-        services.AddHttpClient<InjectableClient>();
+        services.AddHttpClient<Client, InjectableClient>();
         return services;
     }
 }
