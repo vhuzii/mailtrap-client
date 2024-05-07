@@ -17,19 +17,19 @@ public class Client(string token, HttpClient httpClient)
     public Client(string token) : this(token, new HttpClient()) { }
     
 
-    public async Task SendEmailAsync(Email message)
+    public async Task SendEmailAsync(Email email)
     {
-        var request = CreateRequest(message);
+        var request = CreateRequest(email);
         var response = await _httpClient.SendAsync(request);
         response.EnsureSuccessStatusCode();
     }
 
-    private HttpRequestMessage CreateRequest(Email message)
+    private HttpRequestMessage CreateRequest(Email email)
     {
         var url = ClientOptions.Host + SendEndpoint;
         var request = new HttpRequestMessage(HttpMethod.Post, url)
         {
-            Content = new StringContent(JsonSerializer.Serialize(message), Encoding.UTF8, ContentType)
+            Content = new StringContent(JsonSerializer.Serialize(email), Encoding.UTF8, ContentType)
         };
 
         request.Headers.Authorization = _authorization;
