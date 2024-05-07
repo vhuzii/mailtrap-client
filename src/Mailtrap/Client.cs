@@ -10,6 +10,7 @@ public class Client(string token, HttpClient httpClient)
 {
     private const string ContentType = "application/json";
     private const string AuthorizationScheme = "Bearer";
+    private const string Host = "https://send.api.mailtrap.io";
     private const string SendEndpoint = "/api/send";
 
     private readonly HttpClient _httpClient = httpClient;
@@ -26,7 +27,7 @@ public class Client(string token, HttpClient httpClient)
 
     private HttpRequestMessage CreateRequest(Email email)
     {
-        var url = ClientOptions.Host + SendEndpoint;
+        var url = Host + SendEndpoint;
         var request = new HttpRequestMessage(HttpMethod.Post, url)
         {
             Content = new StringContent(JsonSerializer.Serialize(email), Encoding.UTF8, ContentType)
