@@ -1,4 +1,5 @@
-﻿using Mailtrap;
+﻿using System.Reflection;
+using Mailtrap;
 using Mailtrap.DTOs;
 
 const string token = "<TOKEN>";
@@ -24,7 +25,8 @@ await client.SendEmailAsync(new TextEmail
     [
         new()
         {
-            Content = Convert.ToBase64String(await File.ReadAllBytesAsync("attachment.png")),
+            Content = Convert.ToBase64String(await File.ReadAllBytesAsync(
+                Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "/attachment.png")),
             Filename = "attachment.png",
         }
     ]
