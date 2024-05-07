@@ -1,7 +1,7 @@
 # Installation
 
 ```
-dotnet add package MailtrapTestTask --version 1.0.0
+dotnet add package MailtrapTestTask --version 1.0.1
 ```
 
 ## Set up when using DI
