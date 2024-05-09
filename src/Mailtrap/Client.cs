@@ -21,7 +21,7 @@ public class Client(string token, HttpClient httpClient)
     public async Task SendEmailAsync(Email email)
     {
         var request = CreateRequest(email);
-        var response = await _httpClient.SendAsync(request);
+        var response = await _httpClient.SendAsync(request).ConfigureAwait(false);
         response.EnsureSuccessStatusCode();
     }
 
